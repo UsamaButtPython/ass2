@@ -1,0 +1,24 @@
+There’s a tool available in hsqldb.jar for examining and updating HSQLDB databases
+outside Java programs.  To use this get a command tool or PowerShell window,
+make sure you are in the folder containing the database files and give the
+command
+
+java -cp \tomcat\lib\hsqldb.jar org.hsqldb.util.DatabaseManager
+
+(If you are using your own machine and the tomcat folder is not located at the top
+level you may need to use a different folder name.) 
+
+A new window will appear. To use the tool to examine and update the database
+for the assignment set the URL in this window (which will show something like
+jdbc:hsqldb:mem:.) to be jdbc:hsqldb:file:shopdb. (If you give a name in the Setting name
+field you will be able to select it from Recent settingswhen examining the database again later.)
+
+Note that you will not be able to open the database while it is in use in a
+program being run in the Tomcat server or in IntelliJ IDEA; if a program has
+terminated abruptly without closing the database you may need to remove a file
+called shopdb.lck to allow the database to be accessed; doing this is harmless
+as long as the database in not in use in a program.
+
+Once the database has been opened in the window you can use the Command menu
+to perform SQL queries and updates such as SELECT and INSERT to query and modify the
+database. 

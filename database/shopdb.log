@@ -1,0 +1,3 @@
+/*C3*/SET SCHEMA PUBLIC
+DELETE FROM PRODUCT WHERE PID='1' AND ARTIST='The Beatles' AND TITLE='Abbey Road' AND DESCRIPTION='Iconic album from The Beatles' AND PRICE=29 AND THUMBNAIL='abbey_road_thumb.jpg' AND FULLIMAGE='abbey_road_full.jpg' AND CATEGORY='Music'
+COMMIT
